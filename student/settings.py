@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-fk&8zsr!x*#xg*q#^v5g)^40^_l_-)te5yd2iz9#+5qzi7vy$x
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = [".vercel.app",".now.sh"]
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -129,7 +129,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATIC_URL='/static/'
 STATICFILES_DIRS=[BASE_DIR/'static']
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
 
