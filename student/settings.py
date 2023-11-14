@@ -11,6 +11,9 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import os
+
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,9 +26,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-fk&8zsr!x*#xg*q#^v5g)^40^_l_-)te5yd2iz9#+5qzi7vy$x'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -126,6 +129,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATIC_URL='/static/'
 STATICFILES_DIRS=[BASE_DIR/'static']
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
 
