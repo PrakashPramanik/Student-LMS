@@ -53,3 +53,6 @@ class UserRegistrationForm(UserCreationForm):
     class Meta:
         model=User
         fields=['username', 'password1', 'password2']
+        widgets = {
+            'username':forms.TextInput(attrs={'placeholder':'your name','input-type':'search'})
+        }
